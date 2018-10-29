@@ -1,0 +1,18 @@
+/* for sticky footer  */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* changes font throughout the container */
+.container{
+    font-family: 'Noto Sans', sans-serif;
+}
+#survey_anchor{
+    margin-right: 10px
+}
