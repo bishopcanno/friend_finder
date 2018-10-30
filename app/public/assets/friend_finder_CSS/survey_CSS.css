@@ -14,10 +14,12 @@ main {
     font-family: 'Noto Sans', sans-serif;
 }
 
+/* so the button has some margin from the footer */
 .btn{
     margin-bottom: 10px;
 }
 
+/* used so the links in the bottom have some margin */
 #survey_anchor{
     margin-right: 10px
 }

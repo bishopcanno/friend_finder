@@ -26,6 +26,7 @@
     </header>
     
     <main>
+        <!-- text buttons that ask for the users name and email, should not be auto completes, need to change that -->
         <div class="container">            
             <div class="row">
                 <div class="col s6">
@@ -51,14 +52,14 @@
                     </div>
                 </div>
             </div>
-            
+            <!-- directions for th user -->
             <div class="row">
                 <div class="col s12">
                     <h5>Now you will be asked 10 questions and to find your score to match you with potential friends</h5>
                     <h5>Rated where one is strongly Disagree and five is strongly agree</h5>
                 </div>
             </div>
-
+            <!-- 10 questions on a scale of 1 to 5 -->
             <div class="row">
                 <div class="input-field col s8">
                     <select id="question_one">
@@ -199,12 +200,14 @@
                 </div>
             </div> 
             
+            <!-- submit button, runs the POST request in survey_js.js -->
             <button class="btn waves-effect waves-light" id = "survey_submit" type="submit" name="action">Submit
                 <i class="material-icons right">send</i>
             </button>
         </div>
     </main>
     
+    <!-- footer -->
     <footer class="page-footer">
         <div class="footer-copyright">
             <div class="container">

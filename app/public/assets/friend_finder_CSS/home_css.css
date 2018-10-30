@@ -13,6 +13,7 @@ main {
 .container{
     font-family: 'Noto Sans', sans-serif;
 }
+/* used so the links in the bottom have some margin */
 #survey_anchor{
     margin-right: 10px
 }

@@ -51,22 +51,27 @@
           </div>
         </div>
 
-        <!-- this card will eventually become a user profile, if i get that far... -->
+        <!-- user profile -->
         <div class="col s6 center-align">
             <div class="card z-depth-5">
               <div class="card-image">
+                <!-- the idea would be that the users profile pic would be posted here, use the .attr method in the home_js.js file -->
                 <img class="responsive-img" src="./assets/images/friendship.jpg">
               </div>
               <div class="card-title row">
                 <div class="col s12">
+                  <!-- this part will have its inner html changed to the users Name -->
                   <h3 id="friend_head3">Profile</h3>
                 </div>
               </div>
+              <!-- where suitable friends profiles would be posted -->
               <div class="card-content" id="friend_post">
                 
               </div>
+              <!-- is the button that the user will get their profile with, if they dont have one it should direct them to the survey page, if they do it should initialize 
+              the functions in home_js.js that get the users and friends data through the api get routes -->
               <div class="card-action">
-                  <!-- <a class="waves-effect waves-light btn" href="./survey">Profile</a> -->
+                  <a class="waves-effect waves-light btn" id="profile_button" href="./survey">Profile</a>
               </div>
             </div>
           </div>
@@ -74,7 +79,7 @@
     </div>
   </main>
     
-    <!-- footer, needs to be customized for my app, this is a C and P from materializes docs.  -->
+    <!-- footer -->
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">

@@ -71,9 +71,15 @@ function scorePrinter(friendDataAtX, userData){
     }    
 }
 
-// initializes the userQuery function
-userQuery();
-// initializes the friendQuery function
-friendQuery();
+// profile button runs the userQuery and friendQuery functions, would like to have some sort of user auth...
+$("#profile_button").on("click", function(event){
+    event.preventDefault();
+   
+    // initializes the userQuery function
+    userQuery();
+    // initializes the friendQuery function
+    friendQuery();
+})
+
 
 

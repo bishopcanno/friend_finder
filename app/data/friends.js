@@ -1,3 +1,4 @@
+// potential friends array of objects
 var friendsArray = [
     {
         "name":"Alex",
