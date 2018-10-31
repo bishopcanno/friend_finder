@@ -15,14 +15,14 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 
-// the api routes here
-require('./app/routing/api_routes')(app);
-
-// the get routes are located on this file and the sever is requiring this file so it knows what to when it gets certain requests
-require('./app/routing/html_routes')(app);
 
 // listening on PORT
 app.listen(PORT, function(){
     // informs the dev that the app is listening and what the port number its listening on
     console.log(`app is listening on PORT: ${PORT}`);
 });
+// the api routes here
+require('./app/routing/api_routes')(app);
+
+// the get routes are located on this file and the sever is requiring this file so it knows what to when it gets certain requests
+require('./app/routing/html_routes')(app);

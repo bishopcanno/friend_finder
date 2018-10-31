@@ -6,7 +6,7 @@ var differenceTotal = 0;
 
 // friendQuery is a GET function to get the JSON objects in friends.js
 function friendQuery (){
-
+    console.log('friendQuery initialized');
     // uses the windows url and sets it to a variable and passes it down to the api GET request
     let currentUrl = window.location.origin;
 
@@ -26,7 +26,7 @@ function friendQuery (){
 
 // userQuery is a GET function to get the JSON objects in users.js
 function userQuery (){
-    
+    console.log('userQuery initialized')
     // uses the windows url and sets it to a variable and passes it down to the api GET request
     let currentUrl = window.location.origin;
 
@@ -36,23 +36,25 @@ function userQuery (){
         .done(function(userData){
             
             // sets the html in friend_head3 to the users name
-            $("#friend_head3").html(`<h3>${userData.name}</h3>`);
+            $("#friend_head3").html(`<h3>${userData[0].name}</h3>`);
             
             // sets the JSON object to userDataVariable so that its globaly accesable
-            userDataVariable = userData;
+            userDataVariable = userData[0];
 
         });
 };
 
 // scorePrinter function will take each friendData object as an argument as well as the userData object
 function scorePrinter(friendDataAtX, userData){
+   
     // used to make sure that the user has logged in.
-    if(userData.isThereUser){
+    if(userData.userDataScoresArray.length >= 0){
+    
         // runs a for loop over the scores array in each friends object
         for (let y = 0; y < friendDataAtX.scores.length; y++){
 
             // compares each value at the same index for the user and the potential friend
-            var compare = friendDataAtX.scores[y] - userData.scores[y];
+            var compare = friendDataAtX.scores[y] - userData.userDataScoresArray[y];
             
             // runs an if statement that checks to make sure that the difference is a positive number and if it's not multiply it by -1 to make it positive
             // then adds the difference to the differenceTotal
@@ -68,7 +70,9 @@ function scorePrinter(friendDataAtX, userData){
         
         // resets the differenceTotal to zero so the next friend can be compared against the user
         differenceTotal = 0;
-    }    
+    } else{
+        alert("You need to fill out the survey first");
+    }
 }
 
 // profile button runs the userQuery and friendQuery functions, would like to have some sort of user auth...
